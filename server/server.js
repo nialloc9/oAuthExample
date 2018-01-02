@@ -1,3 +1,4 @@
+import bodyParser from 'body-parser';
 import { app } from "./config";
 import api  from "./api";
 

@@ -3,16 +3,14 @@ import register from './methods/register';
 
 const api = (req, res) => {
 
-    const { method, ...data } = req.body;
-
-    const timestamp = Date.now();
+    const { method } = req.body;
 
     if(method === "register"){
-        register({...data, timestamp});
+        register({ req, res });
     }
 
     if(method === "login"){
-        login({...data, timestamp});
+        login({ req, res });
     }
 };
 
